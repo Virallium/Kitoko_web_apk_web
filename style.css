@@ -1,0 +1,451 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', 'sans-serif';
+}
+:root{
+    --bg-color:#081b29;
+    --second-bg-color:#112e42;
+    --text-color:#ededed;
+    --main-color:#00abf0;
+    --work-text-color:#FFD700;
+    --kitoko-color:#1E90FF;
+    --coca-color-:#F40000;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+.light_mode{
+     background: #121212;
+    color: white;
+}
+.dark_mode{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    white-space: nowrap;
+    z-index: 100;
+   gap: min(4rem, 9%); 
+   background: var(--bg-color);
+   padding: 0.8rem;
+}
+
+nav{
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   width: 100%;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Kitoko_Dev{
+    font-size: clamp(1rem, calc(2rem + 5vw), 3rem );
+    color: var(--kitoko-color);
+    font-weight: 600;
+}
+.Work{
+    font-size: clamp(1rem, calc(2rem + 5vw), 3rem );
+    color:var(--work-text-color);
+    font-weight: 600;
+}
+.logo a{
+    font-size: clamp(1.4rem, 4vw, 1.9rem);
+    font-weight: 600;
+    color: var(--text-color);
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+.logo a::before{
+    content: '';
+    width: 0%;
+    height: 100%;
+    font-size: clamp(1.4rem, 4vw, 1.9rem);
+    font-weight: 600;
+    color: var(--text-color);
+    z-index: -10;
+    border-radius: 1rem;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    mix-blend-mode:difference;
+    background: var(--second-bg-color);
+    transition: 1s;
+    z-index: -1;
+}
+.logo a:hover::before{
+    width: 100%;
+}
+nav a{
+    font-size: clamp(1.4rem, 5vw, 1.7rem);
+    color: var(--text-color);
+    font-weight: 500;
+    position: relative;   
+}
+nav a:hover, .active{
+    color: var(--main-color);
+    transition: .5s;
+    animation-delay: 1s;
+}
+nav a::before{
+    content: '';
+    position: absolute;
+    top:100%;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: var(--main-color);
+    border-radius: 1rem;
+    transition: width .5s ease-in;
+}
+nav a:hover::before, .active{
+    width: 100%;
+}
+.links ul{
+ display: flex;
+}
+.links ul li{
+    padding:min(1rem);
+}
+.btn-nav{
+    display: inline-flex;
+    align-items: center;
+    padding: min(1rem, 50%);
+    background: var(--text-color);
+    border-radius: 1rem;
+    background: var(--second-bg-color);
+    position: relative;
+    
+}
+.switch{
+    display: flex;
+    background: var(--text-color);
+    border-radius: 3rem;
+}
+.btn-nav i{
+    font-size: 1.7rem;
+    margin: 0.2rem 1rem;
+    color: var(--main-color);
+    cursor: pointer;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    background: transparent;
+    border-radius: 50%;
+    transition: .7s;
+}
+.btn-nav i:hover{
+   background:var(--second-bg-color);
+}
+#menu_btn{
+    display: none;
+}
+#soleil_btn{
+    display: none;
+}
+#lune_btn{
+    display: block;
+}
+.caché{
+    display: none;
+}
+::-webkit-scrollbar{
+    width: 13px;
+}
+::-webkit-scrollbar-track{
+    background: var(--second-bg-color);
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(45deg,#112e42,#00abf0,#081b29 );
+    box-shadow: 3px 3px 9px #112e42 ;
+    border-radius: 1rem;
+    height: 13px;
+}
+
+.acceuil_section{
+    width: 100%;
+    height:calc(115rem + 20vw);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.acceuil_section h1:first-child{
+    font-size: clamp(2rem, calc(4vw + 1rem), 4rem);
+    text-align: center;
+    flex-wrap: nowrap;
+    color: var(--text-color);
+    position: relative;
+    bottom: calc(10rem + 0.4vw);
+}
+.text_animate h2{
+    font-size: clamp(1.8rem, calc(7vw + 1rem), 2.5rem);
+    text-align: center;
+    letter-spacing: 5px;
+    color: var(--work-text-color); 
+}
+.text_animate h1{
+    font-size: clamp(1.8rem, calc(7vw + 1rem), 4rem);
+    text-align: center;
+    color: var(--kitoko-color);
+    letter-spacing: 0.5rem;
+}
+.text_animate h3{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+    padding: 2rem;
+    gap: 2rem;
+    place-items: center;
+    width: 100%;
+}
+.h3_txt{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: min(5rem, 10%);
+    background: linear-gradient(rgba(0,0,0,0.4),rgba(8, 27, 41, 0.863)), url('photos/KitokoDevWork_photo_web1.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 1rem;
+    font-size: clamp(1.2rem, calc(7vw + 1rem), 2rem);
+    z-index: -1;
+    transition: all 1s linear ;
+}
+.img1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: clamp(1.2rem, calc(7vw + 1rem), 2rem);
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    background:radial-gradient(rgba(0,0,0,0.4), rgba(8, 27, 41, 0.863)), url('photos/KitokoDevWork_photo_web_svg1.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 1rem;
+    z-index: 1;
+    transition: all 1s linear ;
+    padding: min(5rem, 10%);
+} 
+.img1:hover{
+    transform: rotate(4deg) scale(1.1);
+    border-radius: 4rem;
+}
+.img2{
+    width: 100%;
+    height: 100%;
+    background:radial-gradient(rgba(0,0,0,0.4), rgba(8, 27, 41, 0.863)), url('photos/KitokoDevWork_photo_web7.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 1rem;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: clamp(1.2rem, calc(7vw + 1rem), 2rem);
+    padding: min(5rem, 10%);
+    transition: all 1s linear ;
+}
+.img2:hover{
+    transform: rotate(-4deg) scale(1.1);
+    border-radius: 4rem;
+}
+.text_animate p{
+    font-size: clamp(1.8rem, calc(7vw + 1rem),2rem);
+    text-align: center;
+    letter-spacing: 1px;
+}
+.boxs{
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(auto-fit,minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+    position: relative;
+    width: 100%;
+    margin-right: 5rem;
+}
+
+.boxs .box1{
+    background:var(--second-bg-color);
+    width: 70%;
+    height: 100%;
+    padding: min(4rem, 9%);
+    margin: 0 2rem;
+    border-radius: 2rem;
+    display: inline-block;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.boxs .box1 h3{
+    font-size: clamp(1.3rem, calc(7vw + 1rem), 1.7rem);
+}
+.boxs .box1 p{
+    font-size: clamp(1rem, calc(7vw + 1rem), 1.3rem);
+}
+#time{
+    font-size: 6rem;
+    background: var(--text-color);
+    color: var(--bg-color);
+    padding: min(1rem, 9%);
+    border-radius: 1rem;
+    width: 50%;
+    margin-bottom: 1rem;
+}
+.boxs .box2{
+    background:var(--second-bg-color);
+    width: 70%;
+    height: 100%;
+    padding: min(4rem, 9%);
+    margin: 0 2rem;
+    border-radius: 2rem;
+    display: inline-block;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.boxs .box2 i{
+    font-size: 6rem;
+    background: var(--text-color);
+    color: var(--bg-color);
+    padding: min(1rem, 9%);
+    border-radius: 1rem;
+    width: 50%;
+    margin-bottom: 1rem;
+}
+.boxs .box2 h3{
+    font-size: clamp(1.3rem, calc(7vw + 1rem), 1.7rem);
+}
+.boxs .box2 p{
+    font-size: clamp(1rem, calc(7vw + 1rem), 1.3rem);
+}
+.boxs .box3{
+    background:var(--second-bg-color);
+    width: 70%;
+    height: 100%;
+    padding: min(4rem, 9%);
+    margin: 0 2rem;
+    border-radius: 2rem;
+    display: inline-block;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.boxs .box3 i{
+    font-size: 6rem;
+    background: var(--text-color);
+    color: var(--bg-color);
+    padding: min(1rem, 9%);
+    border-radius: 1rem;
+    width: 50%;
+    margin-bottom: 1rem;
+}
+.boxs .box3 h3{
+    font-size: clamp(1.3rem, calc(7vw + 1rem), 1.7rem);
+}
+.boxs .box3 p{
+    font-size: clamp(1rem, calc(7vw + 1rem), 1.3rem);
+}
+.sur_nous{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    background:radial-gradient(rgba(0,0,0,0.4), rgba(8, 27, 41, 0.863)), url('photos/KitokoDevWork_photo_web11.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 3px 3px 9px rgba(8, 27, 41, 0.863), rgba(8, 27, 41, 0.863);
+    z-index: -1;
+    align-items: center;
+    margin-top: min(2rem, 9%);
+    padding-right: min(16rem, 20%);
+    border-radius: 10rem;
+}
+.sur_nous .box1{
+    background: linear-gradient(rgba(17, 46, 66, 0.671), rgba(17, 46, 66, 0.461));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20rem;
+    height:20rem;
+    clip-path: polygon(0% 0%, 44% 0, 64% 50%, 44% 100%, 0 100%);
+    display: flex;
+    justify-content: flex-end;
+    width: 20rem;
+}
+.box1 h2{
+   color:var(--text-color);
+   font-size: clamp(1.3rem, calc(7vw + 1rem), 4rem);
+   align-items: center;
+   display: flex;
+}
+.sur_nous p{
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    top: 0;
+    left: 25rem;
+    font-size: clamp(1.2rem, calc(7vw + 0.5rem), 1.5rem);
+    width: 55rem;
+}
+.sur_nous p span:nth-child(1){
+    font-size: clamp(2rem, calc(7vw + 0.5rem), 3rem);
+    font-weight: 600;
+    
+}
+.kitoko{
+    font-size: clamp(1rem, calc(2rem + 5vw), 3rem );
+    color: var(--kitoko-color);
+    font-weight: 600;
+}
+.work{
+    font-size: clamp(1rem, calc(2rem + 5vw), 3rem );
+    color:var(--work-text-color);
+    font-weight: 600;
+}
+.Apropos_p{
+    font-size: clamp(1.3rem, calc(7vw + 0.5rem), 1.5rem);
+    letter-spacing: 1px;
+}

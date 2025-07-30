@@ -1,0 +1,197 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', 'sans-serif';
+}
+:root{
+    --bg-color:#081b29;
+    --second-bg-color:#112e42;
+    --text-color:#ededed;
+    --main-color:#00abf0;
+    --work-text-color:#FFD700;
+    --kitoko-color:#1E90FF;
+}
+@media(max-width:1090px){
+    header{
+        margin-top: -2.5rem;
+        background: transparent;
+    }
+    .header_bg{
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: var(--bg-color);
+        width: 100%;
+        height: 14%;
+    }
+    .vue .links{
+        display: none;
+    }
+    #menu_btn{
+        display: block;
+    }
+    nav{
+        display: flex;
+       justify-content: flex-end;
+       width: 100%;
+       margin-top: 3rem;
+    }
+    .caché {
+     display:block;
+     opacity: 0;
+     background: var(--second-bg-color);
+      position: relative;
+        top: 7rem;
+        margin-right:min(2rem, 10%);
+        padding: min(3rem, 50%);
+        border-radius: 2rem;
+        transition: opacity .3s ease-in-out;
+    }
+    .caché.active {
+        opacity: 1;
+    }
+    .caché .links ul{
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+    }
+    .logo{
+        position: relative;
+        bottom: 9rem;
+    }
+    .btn-nav{
+        position: relative;
+        bottom: 11rem;
+        left: min(100%);
+    }
+    .Kitoko_Dev{
+    font-size:2.5rem;
+    }
+    .Work{
+    font-size:2.5rem;
+    }
+    .acceuil_section{
+    width: 100%;
+    height:calc(120rem + 55vw);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    }
+}
+@media(max-width:830px){
+    .acceuil_section{
+        height:calc(136rem + 65vw);
+    }
+}
+@media(max-width:770px){
+ .caché{
+    position: relative;
+    right: calc(2rem + 12%);
+ }
+ .acceuil_section{
+        height: 115.4rem;
+    } 
+    .img2{
+        position: relative;
+        left: 15rem;
+    } 
+    .acceuil_section{
+        height:calc(140rem + 65vw);
+    }
+}
+@media(max-width:687px){
+    .acceuil_section{
+        height:calc(125rem + 87vw);
+    }
+}
+@media(max-width:572px){
+    .caché{
+        position: relative;
+        right:min(18rem, 50%);
+    }
+    nav{
+        position: relative;
+        right: min(9rem, 50%);
+    }
+
+    .img2{
+        position: relative;
+        left: 0;
+    }
+       .acceuil_section{
+        height:calc(160em + 85vw);
+    } 
+}
+@media(max-width:475px){
+    .caché{
+        position: relative;
+        right:min(21rem, calc(60% + 1vw));
+        top: 5rem;
+    }
+    nav{
+        position: relative;
+        right: 11rem;
+    }
+    .Kitoko_Dev{
+     font-size:2.2rem;
+    }
+      .Work{
+    font-size:2.2rem;
+    }
+    .acceuil_section{
+        height:calc(165em + 87vw);
+    } 
+    
+}
+@media(max-width:376px){
+    .caché{
+        position: relative;
+        right:min(20rem, 67%);
+    }
+    nav{
+        position: relative;
+        right: min(30rem, calc(37 + 2vw));    
+    }
+    .logo img{
+        width: 80px;
+    }
+    .Kitoko_Dev{
+     font-size:1.9rem;
+    }
+    .Work{
+    font-size:1.9rem;
+    }
+      .header_bg{
+        height:calc(10% + 2vw)
+    }
+    .logo, .Kitoko_Dev,.Work{
+        position: relative;
+        right: 1.1rem;
+    }
+     .acceuil_section{
+        height:calc(175em + 92vw);
+    }  
+}
+@media(max-width:320px){
+       .header_bg{
+        height:calc(13% + 2vw)
+    }
+    nav{
+        position: relative;
+        right: min(20rem, calc(39% + 2vw)); 
+    }
+     .caché{
+        position: relative;
+        right:min(30rem, 67%);
+    }
+    .acceuil_section{
+         height:calc(187em + 97vw);
+    }  
+    
+}
