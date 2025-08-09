@@ -25,6 +25,10 @@ html{
 body{
     background: var(--bg-color);
     color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-x: hidden;
 }
 .light_mode{
      background: #121212;
@@ -36,7 +40,7 @@ body{
 }
 header{
     position: fixed;
-    top: 0;
+    top: -1rem;
     left: 0;
     width: 100%;
     display: flex;
@@ -47,6 +51,7 @@ header{
    gap: min(4rem, 9%); 
    background: var(--bg-color);
    padding: 0.8rem;
+   margin: 0;
 }
 
 nav{
@@ -64,12 +69,18 @@ nav{
     font-size: clamp(1rem, calc(2rem + 5vw), 3rem );
     color: var(--kitoko-color);
     font-weight: 600;
+    align-items: center;
+    position: relative;
+    bottom: 1rem;
 }
 .Work{
     font-size: clamp(1rem, calc(2rem + 5vw), 3rem );
     color:var(--work-text-color);
     font-weight: 600;
+    position: relative;
+    bottom: 1rem;
 }
+
 .logo a{
     font-size: clamp(1.4rem, 4vw, 1.9rem);
     font-weight: 600;
@@ -136,10 +147,7 @@ nav a:hover::before, .active{
     padding: min(1rem, 50%);
     background: var(--text-color);
     border-radius: 1rem;
-    background: var(--second-bg-color);
-    position: relative;
-    
-}
+    background: var(--second-bg-color);}
 .switch{
     display: flex;
     background: var(--text-color);
@@ -189,7 +197,7 @@ nav a:hover::before, .active{
 
 .acceuil_section{
     width: 100%;
-    height:calc(115rem + 20vw);
+    min-height:110rem;
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -298,7 +306,7 @@ nav a:hover::before, .active{
     margin-top: 3rem;
     position: relative;
     width: 100%;
-    margin-right: 5rem;
+
 }
 
 .boxs .box1{
@@ -396,9 +404,13 @@ nav a:hover::before, .active{
     box-shadow: 3px 3px 9px rgba(8, 27, 41, 0.863), rgba(8, 27, 41, 0.863);
     z-index: -1;
     align-items: center;
-    margin-top: min(2rem, 9%);
+    position: relative;
+    bottom: 25rem;
     padding-right: min(16rem, 20%);
     border-radius: 10rem;
+    margin-top: 20rem;
+    margin-bottom: 5rem;
+    overflow: hidden;
 }
 .sur_nous .box1{
     background: linear-gradient(rgba(17, 46, 66, 0.671), rgba(17, 46, 66, 0.461));
@@ -410,7 +422,8 @@ nav a:hover::before, .active{
     clip-path: polygon(0% 0%, 44% 0, 64% 50%, 44% 100%, 0 100%);
     display: flex;
     justify-content: flex-end;
-    width: 20rem;
+    width: 100%;
+    height: 100%;
 }
 .box1 h2{
    color:var(--text-color);
@@ -445,7 +458,548 @@ nav a:hover::before, .active{
     color:var(--work-text-color);
     font-weight: 600;
 }
+.spans{
+    padding: min(2rem, 9%);
+   margin: min(1em, 8%);
+}
 .Apropos_p{
-    font-size: clamp(1.3rem, calc(7vw + 0.5rem), 1.5rem);
+    font-size: clamp(1.3rem, calc(7vw + 0.5rem), 1.7rem);
+    text-align: center;
+    align-items: center;
+    letter-spacing: 2px;
+    margin: min(1em, 8%);
+    padding: min(2rem, 9%);
+}
+.nos_services .box-service{
+    position: relative;
+    bottom: 25rem;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(auto-fit,minmax(350px, 1fr));
+    gap: 2rem;
+}
+#h2_services{
+    position: relative;
+    bottom: 25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(1.7rem, calc(1rem + 7vw), 4rem);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.icon_entreprise{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.icon_entreprise h2, i{
+    font-size: clamp(1.3rem, calc(7vw + 1rem), 2rem);
+}
+.box-service_1, .box-service_2, .box-service_3{
+    background: var(--second-bg-color);
+    max-width: 30rem;
+    padding: min(8rem, 10%);
+    text-align: center;
+    align-items: center;
+    border-radius: 3rem;
+}
+.box-service_1 p, .box-service_2 p, .box-service_3 p{
+    font-size: clamp(1.2rem, calc(7vw + 1rem), 1.3rem);
+    margin-top: 1rem;
+}
+#avantages{
+    margin-top: 4rem;
+    font-size: clamp(1.2rem, calc(7vw + 1rem), 2.3rem);
+    color: var(--kitoko-color);
+}
+.avantages ul li{
+   list-style-type: initial;
+   text-align: left;
+   font-size: clamp(1.2rem, calc(7vw + 1rem), 1.3rem)
+}
+.avantages ul{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    gap: 0.3rem;
+}
+.dure h2{
+    font-size: clamp(1.2rem, calc(7vw + 1rem), 1.7rem);
+    display: flex;
+    gap: 1rem;
+}
+.dure h2 span{
+    color: var(--coca-color-);
+}
+.spécialiste h2{
+    font-size: clamp(1.2rem, calc(7vw + 1rem), 3rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.specialistes_box{
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+.specialistes_box .box1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    background: var(--second-bg-color);
+    padding: min(2em, 8%);
+    width: 35rem;
+    border-radius: 2rem;
+    position: relative;
+}
+.specialistes_box .box1::before{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--kitoko-color);
+    clip-path: circle(0 at 100% 100%);
+    border-radius:2rem ;
+    transition: clip-path .6s ease-in-out;
+}
+.specialistes_box .box1:hover::before{
+    clip-path: circle(100% at 100% 100%);
+}
+.spécialiste{
+    position: relative;
+    bottom: 10rem;
+}
+.txt1 h3{
+ font-size: clamp(1.2rem, calc(7vw + 1rem), 2rem);   
+}
+.txt_content p{
+    text-align: center;
+    line-height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(1.1rem, calc(7vw + 0.5rem), 1.2rem);
+}
+.box2 .img img{
+    background: red;
+    width: 100%;
+}
+.box1 .img, .box2 .img{
+    width: 17rem;
+    height: 17rem;
+    background: linear-gradient(#081b29,#1e8fff9f);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;  
+    clip-path: circle(50% at center 50%);
+    position: relative;
+    overflow: hidden;
+   
+}
+.box1 .img::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    background: #1E90FF;
+    animation: rotation 8s linear infinite ;
+    z-index: -100;
+}
+.box1 .img::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 50%;
+    background: #1E90FF;
+    animation: rotation 8s linear infinite ;
+    animation-delay: 0.1s;
+    z-index: -100;
+}
+.box2 .img::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    background: #1E90FF;
+    animation: rotation 8s linear infinite ;
+    z-index: -100;
+    animation-delay: 0;
+}
+.box2 .img::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 50%;
+    background: #1E90FF;
+    animation: rotation 8s linear infinite ;
+    z-index: -100;
+    animation-delay: 0;
+}
+
+.box1 .img img{
+    clip-path: circle(50% at center 50%);
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+    cursor: pointer;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4));
+    margin: 1rem;
+}
+@keyframes rotation {
+  100%{
+    transform: rotate(360deg);
+    transform: translateY(100%);
+    
+  }
+}
+.specialistes_box .box2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    background: var(--second-bg-color);
+    padding: min(2em, 8%);
+    width: 35rem;
+    border-radius: 2rem;
+    position: relative;
+    margin: 3rem;
+}
+.specialistes_box .box2::before{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--kitoko-color);
+    clip-path: circle(0% at 100% 100%);
+    border-radius:2rem ;
+    transition: clip-path .8s ease-in-out;
+}
+.specialistes_box .box2:hover::before{
+    clip-path: circle(100% at 100% 100%);
+}
+.box2 .img img{
+    clip-path: circle(50% at center 50%);
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+    cursor: pointer;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4));
+    margin: 1rem;
+}
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio h2{
+    margin-bottom: 4rem;
+}
+
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.portfolio-box  {
+    position: relative;
+    border-radius: 2rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio-box img {
+    width: 100%;
+    transition: transform .2s ease-in-out;
+}
+.portfolio-box:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,.1), var(--main-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem 7rem;
+    transform: translateY(100%);
+    transition: transform 0.2s ease-in-out;
+}
+
+.portfolio-box:hover .portfolio-layer  {
+    transform: translateY(0%)
+}
+
+.portfolio-layer  h4 {
+    font-size: 3rem;
+}
+
+.portfolio-layer  p {
+    font-size: 1.6rem;
+    margin: 3rem 0 1rem;
+}
+
+.portfolio-layer  a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: var(--text-color) url('photos/KitokoDevWork_logo.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+}
+.portfolio-layer  a  i {
+    font-size: 2rem;
+    color: var(--bg2);
+}
+.section-title{
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--work-text-color);
+}
+.section-title span{
+    color: var(--main-color);
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact h2{
+    font-size: clamp(2rem, calc(7vw + 1rem), 3.7rem);
+    color: var(--kitoko-color);
+    margin:2rem 0
+}
+.contact h2 span{
+    color: var(--work-text-color);
+}
+.contact form{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(2, 1fr));
+    gap: 2rem;
+}
+.contact form input{
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4));
+    color: var(--text-color);
+    width: 100%;
+}
+::placeholder{
+    color: var(--text-color);
+}
+textarea{
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4));
+    border: none;
+    border-radius: 0.3rem;
+    color: var(--text-color);
+    max-width: 100%;
+}
+.contact form a{
+    font-size: clamp(1.7rem, calc(7vw + 1rem), 2rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+    background: linear-gradient(to right, rgba(0,0,0,0.4), var(--second-bg-color), var(--main-color));
+    padding: 1rem;
+    border-radius: 1rem;
+    z-index: 100;
+    margin-bottom: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+.contact form a:hover{
+    color: var(--kitoko-color);
+    transition: color .7s;
+}
+.contact form a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--bg-color);
+    z-index: -10;
+    border-radius: 1rem;
+    transition: width .7s;
+}
+.contact form a:hover::before{
+    width: 100%;
+}
+.adresse .reseaux_sociaux a i{
+    transition: color 0.7s;
+}
+.adresse .reseaux_sociaux a{
+    background: #fff;
+    padding:0.5em;
+    border-radius: 50%;
+    color: #111111;
+    position: relative;
+    top: 3rem;
+    flex-shrink: 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.256);
+    height: 32px;
+    width: 32px;
+    transition: .7s;
+}
+.adresse .reseaux_sociaux{
+    position: relative;
+    top: 0.6rem;
+    
+}
+.adresse .reseaux_sociaux a::before{
+    content: attr(data-social);
+    position: absolute;
+    top: 2rem;
+    background: black;
+    color: #fff;
+    padding: 0.5em 1em;
+    border-radius: 100px;
+    box-shadow:0 5px 10px rgba(0, 0, 0, 0.256);
+    transform: translateY(-65px) rotate(25deg);
+    opacity: 0;
+    transition: .2s;
+}
+.adresse .reseaux_sociaux a:hover::before{
+    transform: translateY(-45px) rotate(0);
+    opacity: 1;
+}
+.adresse .reseaux_sociaux a:hover{
+    background: #0a090f;
+}
+.adresse .reseaux_sociaux a i:hover{
+    color: #fff;
+}
+
+
+
+
+.informations-contents{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    margin: 1rem 0;
+    background:  linear-gradient(rgba(134, 134, 201, 0.048), rgba(134, 134, 201, 0.066));
+    padding: min(2rem, 9%);
+    position: relative;
+    top: 1rem;
+}
+.liens-contents{
+    display: flex;
+    flex-direction: column;
+}
+.info-contents{
+    display: flex;
+    flex-direction: column;
+}
+.infos{
+   display: flex;
+    flex-direction: column;
+    gap: 1rem;  
+}
+.infos a{
+    font-size: clamp(0.6rem, calc(1rem + 2vw), 1.1rem);
+    position: relative;
+    color: var(--text-color);
+    font-size: 1.1rem;
+}
+.liens a{
+    font-size: clamp(0.6rem, calc(1rem + 2vw), 1.1rem);
+    position: relative;
+    color: var(--text-color);
+    font-size: 1.1rem;
+}
+.liens a:hover{
+    color: var(--main-color);
+    transition: .7s;
+}
+.infos a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: var(--second-bg-color);
+    transition: width .7s;
+}
+.infos a:hover::before{
+    width: 75%;
+}
+.infos a:hover{
+    color: var(--main-color);
+    transition: .7s;
+}
+.liens{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.liens a{
+    font-size: clamp(0.6rem, calc(1rem + 2vw), 1.1rem);
+    position: relative;
+}
+.liens a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: var(--second-bg-color);
+    transition: width .7s;
+}
+.liens a:hover::before{
+    width: 75%;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: small;
+    padding: min(1rem, 9%);
+    background:  linear-gradient(rgba(134, 134, 201, 0.048), rgba(134, 134, 201, 0.066));
     letter-spacing: 1px;
+    text-align: center;
 }

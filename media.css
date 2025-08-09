@@ -23,7 +23,7 @@
     }
     .header_bg{
         position: fixed;
-        top: 0;
+        top: -1rem;
         left: 0;
         background: var(--bg-color);
         width: 100%;
@@ -77,43 +77,116 @@
     }
     .acceuil_section{
     width: 100%;
-    height:calc(120rem + 55vw);
+    min-height:130rem;
     align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     }
 }
+@media(max-width:860px){
+    .sur_nous .box1{
+        clip-path: polygon(0 0, 100% 0%, 100% 26%, 49% 57%, 0 26%);
+        width: 100rem;
+    }
+    .sur_nous .box1 h2{
+        position: relative;
+        bottom: 8rem;
+        display: grid;
+        place-items: center;
+        width: 100%;
+    }
+    .sur_nous .p{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 75rem;
+        height: 100%;
+        font-size: 5rem;
+    }
+        .Apropos_p{
+        width: 60rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        position: relative;
+        letter-spacing: 1px;
+        bottom: 10rem;
+        font-size: 2rem;
+        margin-left: 8rem;
+    }
+    .sur_nous .p .spans{
+        margin-left: 8rem;
+    }
+}
 @media(max-width:830px){
     .acceuil_section{
-        height:calc(136rem + 65vw);
+        min-height:150rem;
+    }
+    .sur_nous .p .spans{
+        position: relative;
+        bottom: 10rem;
+        font-size: 4rem;
+    }
+    .Apropos_p{
+        width: 60rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        position: relative;
+        letter-spacing: 1px;
+        bottom: 10rem;
+        font-size: 2rem;
+    }
+    .sur_nous{
+        max-width: 80rem;
+        min-height: 80rem;
     }
 }
 @media(max-width:770px){
  .caché{
     position: relative;
-    right: calc(2rem + 12%);
+    right: calc(0.5rem + 3%);
  }
  .acceuil_section{
-        height: 115.4rem;
+        min-height:165rem;
     } 
     .img2{
         position: relative;
         left: 15rem;
-    } 
-    .acceuil_section{
-        height:calc(140rem + 65vw);
+    }
+    .Apropos_p{
+        margin-right:min(10rem, 10%);
     }
 }
 @media(max-width:687px){
     .acceuil_section{
-        height:calc(125rem + 87vw);
+        min-height:175rem;
     }
+    .sur_nous{
+        padding: 0;
+    }
+    .Apropos_p{
+        font-size: clamp(1.3rem, 2vw, 1.5rem);
+        margin-right: 20rem;
+        width: 45rem;
+    }
+    .sur_nous .p .spans{
+        margin-right: 20rem;
+    }
+    .sur_nous .box1 h2{
+        margin-right: 20rem;
+    }
+
 }
 @media(max-width:572px){
     .caché{
         position: relative;
-        right:min(18rem, 50%);
+        right:calc(9rem + 10vw);
     }
     nav{
         position: relative;
@@ -125,13 +198,32 @@
         left: 0;
     }
        .acceuil_section{
-        height:calc(160em + 85vw);
+        min-height:199rem;
+    }
+    .Apropos_p{
+        font-size: 1.3rem;
+        margin-right: 33rem;
+        width: min(50rem, 70%);
+    }
+    .sur_nous .p .spans{
+        margin-right: 30rem;
+        width: 50rem;
+        font-size: 3rem;
+    }
+    .sur_nous .box1 h2{
+        margin-right: 40rem;
+        margin-bottom: 24rem;
+        flex-wrap: nowrap;
     } 
+     .sur_nous{
+        background-position:left;
+        background-size: cover;
+     }
 }
 @media(max-width:475px){
     .caché{
         position: relative;
-        right:min(21rem, calc(60% + 1vw));
+        right: calc(12rem + 15vw);
         top: 5rem;
     }
     nav{
@@ -145,14 +237,95 @@
     font-size:2.2rem;
     }
     .acceuil_section{
-        height:calc(165em + 87vw);
+        min-height:199rem;
     } 
-    
+    textarea{
+        max-width: 80%;
+        margin: 0 12%;
+    }
+   .contact form input{
+        max-width: 80%;
+        margin-left: 12%;
+
+    }
+    .contact form a{
+        padding: 0.5rem;
+        width: 80%;
+        margin-left: 12%;
+    }
+    .contact{
+        margin: calc(2rem, 10%);
+        max-width:min(65rem, 90%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: none;
+    }
+    .Apropos_p{
+        margin-right: 45rem;
+        width: min(40rem, 70%);
+        position: relative;
+        bottom: 60rem;
+    }
+    .sur_nous .p .spans{
+        margin-right: 40rem;
+        width: 40rem;
+        font-size: 3rem;
+        position: relative;
+        bottom: 50rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .sur_nous .box1 h2{
+        margin-right: 50rem;
+        margin-bottom: 30rem;
+        flex-wrap: nowrap;
+    }
+    .sur_nous{
+        width: 39rem;
+        height: 39rem;
+        margin-left: 4rem;
+    }
+}
+@media (max-width:457px) {
+    .sur_nous{
+        width: 39rem;
+        height: 39rem;
+        margin-left: 2rem;
+    }
+}
+@media (max-width:430px){
+     .sur_nous{
+        width: 100%;
+        height: 39rem;
+        margin-left: 0;
+        border-radius: 0;
+    }
+    .Apropos_p{
+        margin-right: 45rem;
+        width: min(40rem, 70%);
+        position: relative;
+        bottom: 60rem;
+    }
+    .sur_nous .p .spans{
+        margin-right: 50rem;
+        width: 40rem;
+        font-size: 3rem;
+        position: relative;
+        bottom: 50rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
 }
 @media(max-width:376px){
     .caché{
         position: relative;
-        right:min(20rem, 67%);
+        right:calc(6rem + 15vw);
     }
     nav{
         position: relative;
@@ -175,12 +348,59 @@
         right: 1.1rem;
     }
      .acceuil_section{
-        height:calc(175em + 92vw);
+        height:calc(170rem + 89vw);
     }  
+    .btn-nav{
+        position: relative;
+        margin-right: -18rem;
+        padding: 0.5rem;
+    }
+    textarea{
+        max-width: 70%;
+        margin: 0 15%;
+    }
+   .contact form input{
+        max-width: 70%;
+        margin-left: 15%;
+
+    }
+    .contact form a{
+        padding: 0.5rem;
+        width: 70%;
+        margin-left: 15%;
+    }
+    .boxs{
+        margin-right: 15%;
+    }
+    .nos_services .box-service{
+        position: relative;
+        right: 3.3rem;
+    }
+    .box-service_1, .box-service_2, .box-service_3{
+        width: 27rem;
+    }
+    .specialistes_box .box1{
+       width: 85%; 
+        margin-right: 3rem;
+    }
+     .specialistes_box .box2{
+       width: 85%; 
+       margin-right: 7rem;
+    }
+    .Apropos_p{
+        margin-right: 65%;
+        width: min(30rem, 70%);
+        position: relative;
+        bottom: 60rem;
+    }
+    .sur_nous .p .spans{
+        margin-right: 65%;
+        width: 30rem;
+    }
 }
 @media(max-width:320px){
        .header_bg{
-        height:calc(13% + 2vw)
+        height:calc(13% + 2vw);
     }
     nav{
         position: relative;
@@ -188,10 +408,46 @@
     }
      .caché{
         position: relative;
-        right:min(30rem, 67%);
+        right:min(30rem, 65%);
+    }
+    .logo{
+        margin-top: 1rem;
     }
     .acceuil_section{
-         height:calc(187em + 97vw);
+        height:calc(180rem + 89vw);
     }  
+    .btn-nav{
+        position: relative;
+        right: 2.3rem;
+        margin-right: -2.5rem;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        margin-top: 3rem;
+        margin-left: 2.4rem;
+    }
+    .specialistes_box .box1{
+       width: 75%; 
+       margin-right: 7rem; 
+    }
+    .specialistes_box .box2{
+       width: 75%; 
+       margin-right: 10rem; 
+    }
+    .Apropos_p{
+        margin-right: 72%;
+        width: min(30rem, 70%);
+        position: relative;
+        bottom: 60rem;
+    }
+    .sur_nous .p .spans{
+        margin-right: 72%;
+        width: 30rem;
+    }
+    .sur_nous .box1 h2{
+        margin-right: 60rem;
+        margin-bottom: 30rem;
+        flex-wrap: nowrap;
+    }
     
 }
